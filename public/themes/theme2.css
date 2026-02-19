@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --rv-bg-page: #191a18;
+  --rv-bg-surface: #171a18;
+  --rv-text: #f5f7f2;
+  --rv-text-muted: #b5baa8;
+  --rv-border: #2c332d;
+  --rv-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+  --rv-gray: #b5baa8;
+  --rv-gray-dark: #7c8073;
+  --rv-gray-light: #2f332e;
+  --rv-bg-gray: #242624;
+  --rv-bg-gray-light: #2b2f2b;
+  --rv-bg-gray-dark: #191b19;
+
+  --rv-primary: #a3bb09;
+  --rv-bg-primary: #a3bb09;
+  --rv-primary-light: #fbffdd;
+  --rv-bg-primary-light: #fbffdd;
+  --rv-primary-dark: #91a706;
+  --rv-bg-primary-dark: #91a706;
+
+  --rv-secondary: #191a18;
+  --rv-bg-secondary: #191a18;
+  --rv-secondary-light: #3a3a3a;
+  --rv-bg-secondary-light: #3a3a3a;
+  --rv-secondary-dark: #0a0a09;
+  --rv-bg-secondary-dark: #0a0a09;
+
+  --rv-white: #ffffff;
+  --rv-white-light: #ffffff26;
+  --rv-black: #f5f7f2;
+  --rv-bg-white: var(--rv-bg-surface);
+  --rv-bg-white-light: #ffffff26;
+  --rv-bg-black: #000000;
+
+  --rv-chart-invested: var(--rv-primary);
+  --rv-chart-return: var(--rv-secondary-dark);
+  --rv-chart-growth: var(--rv-secondary-dark);
+
+  --rv-bg-gradient: linear-gradient(
+    135deg,
+    var(--rv-bg-primary) 30%,
+    var(--rv-bg-secondary-dark) 80%
+  );
+  --rv-bg-image: linear-gradient(110deg, #0f1110 40%, #0f111000 100%);
+  --rv-body-font: "Urbanist", sans-serif;
+}
+
+body {
+  font-family: var(--rv-body-font);
+}

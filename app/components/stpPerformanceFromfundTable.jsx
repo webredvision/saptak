@@ -1,0 +1,227 @@
+"use client";
+
+import * as React from "react";
+import {
+  useReactTable,
+  getCoreRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  getFilteredRowModel,
+  flexRender,
+} from "@tanstack/react-table";
+import { Button } from "@/app/components/ui/button";
+import { Input } from "@/app/components/ui/input";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/app/components/ui/table";
+import { CaretSortIcon } from "@radix-ui/react-icons";
+
+const StpPerformanceFromfundTable = (prop) => {
+  const data1 = prop.data.withdrawlingScheme.resData;
+  const [loading, setLoading] = React.useState(false);
+  const [sorting, setSorting] = React.useState([]);
+  const [columnFilters, setColumnFilters] = React.useState([]);
+  const [columnVisibility, setColumnVisibility] = React.useState({});
+  const [rowSelection, setRowSelection] = React.useState({});
+  const columns = [
+    {
+      accessorKey: "navDate",
+      header: ({ column }) => {
+        return (
+          <div className="flex items-center cursor-pointer whitespace-nowrap text-white"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Date
+            <CaretSortIcon className="ml-2 h-4 w-4 text-white" />
+          </div>
+        )
+      },
+      cell: ({ row }) => <div>{row.getValue("navDate")}</div>,
+    },
+    {
+      accessorKey: "cashFlow",
+      header: ({ column }) => {
+        return (
+          <div className="flex items-center cursor-pointer whitespace-nowrap text-white"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Cash Flow
+            <CaretSortIcon className="ml-2 h-4 w-4 text-white" />
+          </div>
+        )
+      },
+      cell: ({ row }) => <div>{row.getValue("cashFlow")}</div>,
+    },
+    {
+      accessorKey: "nav",
+      header: ({ column }) => {
+        return (
+          <div className="flex items-center cursor-pointer whitespace-nowrap text-white"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Nav
+            <CaretSortIcon className="ml-2 h-4 w-4 text-white" />
+          </div>
+        )
+      },
+      cell: ({ row }) => <div>{row.getValue("nav")}</div>,
+    },
+    {
+      accessorKey: "units",
+      header: ({ column }) => {
+        return (
+          <div className="flex items-center cursor-pointer whitespace-nowrap text-white"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Units
+            <CaretSortIcon className="ml-2 h-4 w-4 text-white" />
+          </div>
+        )
+      },
+      cell: ({ row }) => <div className="capitalize">{row.getValue("units")}</div>,
+    },
+    {
+      accessorKey: "cumulativeUnits",
+      header: ({ column }) => {
+        return (
+          <div className="flex items-center cursor-pointer whitespace-nowrap text-white"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Cumulative Unit
+            <CaretSortIcon className="ml-2 h-4 w-4 text-white" />
+          </div>
+        )
+      },
+      cell: ({ row }) => <div className="capitalize">{row.getValue("cumulativeUnits")}</div>,
+    },
+    {
+      accessorKey: "netAmount",
+      header: ({ column }) => {
+        return (
+          <div className="flex items-center cursor-pointer whitespace-nowrap text-white"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Amount
+            <CaretSortIcon className="ml-2 h-4 w-4 text-white" />
+          </div>
+        )
+      },
+      cell: ({ row }) => <div className="capitalize">{row.getValue("netAmount")}</div>,
+    },
+    {
+      accessorKey: "currentValue",
+      header: ({ column }) => {
+        return (
+          <div className="flex items-center cursor-pointer whitespace-nowrap text-white"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Valuation
+            <CaretSortIcon className="ml-2 h-4 w-4 text-white" />
+          </div>
+        )
+      },
+      cell: ({ row }) => <div className="capitalize">{row.getValue("currentValue")}</div>,
+    },
+  ];
+
+  const table = useReactTable({
+    data: data1 || [], // Make sure data is an empty array if undefined
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    onSortingChange: setSorting,
+    onColumnFiltersChange: setColumnFilters,
+    onColumnVisibilityChange: setColumnVisibility,
+    onRowSelectionChange: setRowSelection,
+    state: {
+      sorting,
+      columnFilters,
+      columnVisibility,
+      rowSelection,
+    },
+  });
+
+  return (
+    <div>
+      <div className="w-full">
+        <div className="flex items-center py-4">
+          <Input
+            placeholder="Filter by title..."
+            value={table.getColumn("navDate")?.getFilterValue() ?? ""}
+            onChange={(event) =>
+              table.getColumn("navDate")?.setFilterValue(event.target.value)
+            }
+            className="max-w-sm border border-[var(--rv-primary)] rounded-xl focus:ring-[var(--rv-primary)]"
+          />
+        </div>
+        <div className="rounded-xl border border-[var(--rv-primary)] overflow-hidden">
+          <div className="overflow-x-auto">
+            <Table>
+              <TableHeader className="bg-[var(--rv-primary)] text-white">
+                {table.getHeaderGroups().map((headerGroup) => (
+                  <TableRow key={headerGroup.id} className="hover:bg-[var(--rv-primary)]/90 border-b-0">
+                    {headerGroup.headers.map((header) => (
+                      <TableHead key={header.id} className="text-white h-12 font-bold whitespace-nowrap">
+                        {header.isPlaceholder
+                          ? null
+                          : flexRender(header.column.columnDef.header, header.getContext())}
+                      </TableHead>
+                    ))}
+                  </TableRow>
+                ))}
+              </TableHeader>
+              <TableBody>
+                {data1.length ? (
+                  table.getRowModel().rows.map((row) => (
+                    <TableRow key={row.id} data-state={row.getIsSelected() && "selected"} className="border-b border-[var(--rv-border)] hover:bg-[var(--rv-bg-primary-dark)]">
+                      {row.getVisibleCells().map((cell) => (
+                        <TableCell key={cell.id}>
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  ))
+                ) : (
+                  <TableRow>
+                    <TableCell colSpan={columns.length} className="h-24 text-center">
+                      No results.
+                    </TableCell>
+                  </TableRow>
+                )}
+              </TableBody>
+            </Table>
+          </div>
+        </div>
+        <div className="flex items-center justify-end space-x-2 py-4">
+          <Button
+            className="px-4 py-2 text-sm rounded-full bg-[var(--rv-bg-surface)] text-[var(--rv-primary)] border border-[var(--rv-primary)] hover:bg-[var(--rv-primary)] hover:text-white transition-all disabled:opacity-50"
+            variant="outline"
+            size="sm"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            Previous
+          </Button>
+          <Button
+            className="px-4 py-2 text-sm rounded-full bg-[var(--rv-bg-surface)] text-[var(--rv-primary)] border border-[var(--rv-primary)] hover:bg-[var(--rv-primary)] hover:text-white transition-all disabled:opacity-50"
+            variant="outline"
+            size="sm"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          >
+            Next
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default StpPerformanceFromfundTable;

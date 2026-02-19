@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+:root {
+  --rv-bg-page: var(--rv-bg-white);
+  --rv-bg-surface: var(--rv-bg-white);
+  --rv-text: var(--rv-black);
+  --rv-text-muted: var(--rv-gray);
+  --rv-border: var(--rv-gray-light);
+  --rv-shadow: 0 10px 30px rgba(15, 36, 83, 0.12);
+
+  --rv-gray: #58607a;
+  --rv-gray-dark: #2a3146;
+  --rv-gray-light: #e5e9f3;
+  --rv-bg-gray: #f2f4f8;
+  --rv-bg-gray-light: #f6f8fb;
+  --rv-bg-gray-dark: #1e2333;
+
+  --rv-primary: #0B3C5D;
+  --rv-bg-primary: #0B3C5D;
+  --rv-primary-light: #e5f5ff;
+  --rv-bg-primary-light: #e5f5ff;
+  --rv-primary-dark: #012841;
+  --rv-bg-primary-dark: #012841;
+
+  --rv-secondary: #1FA6A0;
+  --rv-bg-secondary: #1FA6A0;
+  --rv-secondary-light: #e1fefc;
+  --rv-bg-secondary-light: #e1fefc;
+  --rv-secondary-dark: #003330;
+  --rv-bg-secondary-dark: #003330;
+
+  --rv-white: #fff;
+  --rv-white-light: #ffffff40;
+  --rv-black: #000000;
+  --rv-black-light: #00000040;
+  --rv-bg-white: #fff;
+  --rv-bg-white-light: #ffffff40;
+  --rv-bg-black: #000000;
+  --rv-bg-black-light: #00000040;
+
+  --rv-chart-invested: var(--rv-primary-light);
+  --rv-chart-return: var(--rv-secondary);
+  --rv-chart-growth: var(--rv-secondary);
+
+  --rv-bg-gradient: linear-gradient(
+    at top right,
+    var(--rv-bg-secondary) 0%,
+    var(--rv-bg-secondary-dark) 60%
+  );
+  --rv-bg-image: linear-gradient(
+    110deg,
+    var(--rv-bg-white) 40%,
+    #ffffff00 100%
+  );
+  --rv-body-font: "Sora", sans-serif;
+}
+
+body {
+  font-family: var(--rv-body-font);
+}

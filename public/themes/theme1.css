@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --rv-bg-page: var(--rv-bg-white);
+  --rv-bg-surface: var(--rv-bg-white);
+  --rv-text: var(--rv-black);
+  --rv-text-muted: var(--rv-gray);
+  --rv-border: var(--rv-gray-light);
+  --rv-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --rv-gray: #6b6b6b;
+  --rv-gray-dark: #2f2f2f;
+  --rv-gray-light: #e6e6e6;
+  --rv-bg-gray: #f3f3f3;
+  --rv-bg-gray-light: #f7f7f7;
+  --rv-bg-gray-dark: #2a2a2a;
+
+  --rv-primary: #ec5d81;
+  --rv-bg-primary: #ec5d81;
+  --rv-primary-light: #ffd8e2;
+  --rv-bg-primary-light: #ffd8e2;
+  --rv-primary-dark: #e9003a;
+  --rv-bg-primary-dark: #e9003a;
+
+  --rv-secondary: #3c0028;
+  --rv-bg-secondary: #3c0028;
+  --rv-secondary-light: #ffdbf3;
+  --rv-bg-secondary-light: #ffdbf3;
+  --rv-secondary-dark: #14010e;
+  --rv-bg-secondary-dark: #14010e;
+
+  --rv-white: #fff;
+  --rv-white-light: #ffffff40;
+  --rv-black: #000;
+  --rv-bg-white: #fff;
+  --rv-bg-white-light: #ffffff40;
+  --rv-bg-black: #000;
+
+  --rv-chart-invested: var(--rv-primary);
+  --rv-chart-return: var(--rv-secondary);
+  --rv-chart-growth: var(--rv-secondary);
+
+  --rv-bg-gradient: linear-gradient(
+    to left,
+    var(--rv-bg-primary-dark),
+    var(--rv-bg-secondary-dark)
+  );
+  --rv-bg-image: linear-gradient(
+    110deg,
+    var(--rv-bg-white) 40%,
+    #ffffff00 100%
+  );
+  --rv-body-font: "Outfit", sans-serif;
+}
+
+body {
+  font-family: var(--rv-body-font);
+}

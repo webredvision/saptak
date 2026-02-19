@@ -1,0 +1,113 @@
+import { NextResponse } from 'next/server';
+import { ConnectDB } from '@/lib/db/ConnectDB';
+import AboutUsModel from '@/lib/models/AboutUsModel';
+import { deleteFileIfExists, saveImageToLocal } from '@/lib/functions';
+export async function GET(req, { params }) {
+  const { id } = await params;
+  try {
+    await ConnectDB();
+    const about = await AboutUsModel.findById(id);
+    if (!about) {
+      return NextResponse.json({ error: 'About Us not found' }, { status: 404 });
+    }
+    return NextResponse.json({ about }, { status: 200 });
+  } catch (error) {
+    console.error('GET error:', error);
+    return NextResponse.json({ error: 'Error fetching About Us data' }, { status: 500 });
+  }
+}
+
+// PUT: Update About Us
+export async function PUT(req, { params }) {
+  const { id } = await params;
+
+  try {
+    await ConnectDB();
+    const formData = await req.formData();
+    const title = formData.get('title');
+    const description = formData.get('description');
+    const image = formData.get('image');
+    const file = formData.get('image');
+    // Validate file size (1 MB = 1 * 1024 * 1024 bytes)
+    if (file && file.size > 500 * 1024) {
+      return NextResponse.json(
+        { error: "File size exceeds 500 KB limit" },
+        { status: 400 }
+      );
+    }
+
+
+
+    const about = await AboutUsModel.findById(id);
+    if (!about) {
+      return NextResponse.json({ error: 'About Us not found' }, { status: 404 });
+    }
+
+    // If image is updated
+    if (image && image.size > 0) {
+      // If there's a new image, handle the old image deletion
+      const publicId = about.image?.public_id;
+      if (publicId) {
+        const deleted = deleteFileIfExists("aboutus", publicId);
+        if (!deleted) {
+          console.warn("Image file not found or already deleted:", publicId);
+        }
+      }
+      let uploadData = null;
+
+      try {
+        uploadData = await saveImageToLocal("aboutus", file);
+        if (uploadData.error) {
+          return NextResponse.json(
+            { error: uploadData.error },
+            { status: uploadData.status || 400 }
+          );
+        }
+      } catch (uploadError) {
+        return NextResponse.json(
+          { error: "Image upload failed" },
+          { status: 500 }
+        );
+      }
+      // Update the testimonial with the new image data
+      about.image = {
+        url: uploadData.url,
+        public_id: uploadData.filename,
+      };
+    }
+    about.title = title || about.title;
+    about.description = description || about.description;
+
+    await about.save();
+    return NextResponse.json({ message: 'About Us updated successfully', about }, { status: 200 });
+  } catch (error) {
+    console.error('PUT error:', error);
+    return NextResponse.json({ error: 'Failed to update About Us' }, { status: 500 });
+  }
+}
+
+// DELETE: Remove About Us by ID
+export async function DELETE(req, { params }) {
+  const { id } = await params;
+
+  try {
+    await ConnectDB();
+    const about = await AboutUsModel.findById(id);
+    if (!about) {
+      return NextResponse.json({ error: 'About Us not found' }, { status: 404 });
+    }
+
+    if (about.image?.public_id) {
+      const deleted = deleteFileIfExists("aboutus", about.image?.public_id);
+      if (!deleted) {
+        console.warn("Image file not found or already deleted:", publicId);
+      }
+    }
+
+    await AboutUsModel.findByIdAndDelete(id);
+    return NextResponse.json({ message: 'About Us deleted successfully' }, { status: 200 });
+  } catch (error) {
+    console.error('DELETE error:', error);
+    return NextResponse.json({ error: 'Failed to delete About Us' }, { status: 500 });
+  }
+}

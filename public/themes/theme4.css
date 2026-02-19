@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --rv-bg-page: var(--rv-bg-white);
+  --rv-bg-surface: var(--rv-bg-white);
+  --rv-text: var(--rv-black);
+  --rv-text-muted: var(--rv-gray);
+  --rv-border: var(--rv-gray-light);
+  --rv-shadow: 0 10px 30px rgba(120, 27, 250, 0.12);
+
+  --rv-gray: #645a76;
+  --rv-gray-dark: #2b2236;
+  --rv-gray-light: #e6def7;
+  --rv-bg-gray: #f3eefc;
+  --rv-bg-gray-light: #f7f3ff;
+  --rv-bg-gray-dark: #1b1426;
+
+  --rv-primary: #781bfa;
+  --rv-bg-primary: #781bfa;
+  --rv-primary-light: #e7d6ff;
+  --rv-bg-primary-light: #e7d6ff;
+  --rv-primary-dark: #4803a8;
+  --rv-bg-primary-dark: #4803a8;
+
+  --rv-secondary: #0c0119;
+  --rv-bg-secondary: #0c0119;
+  --rv-secondary-light: #c7c7c7;
+  --rv-bg-secondary-light: #c7c7c7;
+  --rv-secondary-dark: #06000c;
+  --rv-bg-secondary-dark: #06000c;
+
+  --rv-white: #fff;
+  --rv-white-light: #ffffff10;
+  --rv-black: #000;
+  --rv-bg-white: #fff;
+  --rv-bg-white-light: #ffffff10;
+  --rv-bg-black: #000;
+
+  --rv-chart-invested: var(--rv-primary-light);
+  --rv-chart-return: var(--rv-secondary);
+  --rv-chart-growth: var(--rv-secondary);
+
+  --rv-bg-gradient: linear-gradient(
+    120deg,
+    var(--rv-bg-primary) 45%,
+    var(--rv-bg-primary-light) 100%
+  );
+  --rv-bg-image: linear-gradient(
+    110deg,
+    var(--rv-bg-white) 40%,
+    #ffffff00 100%
+  );
+  --rv-body-font: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  font-family: var(--rv-body-font);
+}
