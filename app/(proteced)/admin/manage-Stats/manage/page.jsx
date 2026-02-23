@@ -90,7 +90,7 @@ const StatsTable = () => {
       accessorKey: "image",
       header: "Image",
       cell: ({ row }) => (
-        <Image
+        <Image unoptimized
           src={row.original.image?.url || "/no-image.png"}
           alt={row.original.title}
           width={60}

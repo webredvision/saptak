@@ -137,7 +137,7 @@ const GoalPlanningTheme5 = () => {
             >
               <h3 className="font-bold mb-2">{item.title}</h3>
               <p className="text-sm mb-3">{item.description}</p>
-              <Image
+              <Image unoptimized
                 src={item.image}
                 alt={item.title}
                 width={600}

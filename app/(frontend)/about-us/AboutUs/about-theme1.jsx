@@ -398,7 +398,7 @@ const AboutTheme1 = ({
                 className="border border-[var(--rv-white-light)] rounded-xl p-5 md:p-8 flex flex-col gap-2 items-center text-center hover:shadow-lg transition-all duration-300 bg-[var(--rv-bg-white-light)] backdrop-blur-xl"
               >
                 <div className="w-20 h-20 bg-[var(--rv-primary)] p-4 rounded-full">
-                  <Image
+                  <Image unoptimized
                     src={item.img}
                     alt={item.heading}
                     width={80}

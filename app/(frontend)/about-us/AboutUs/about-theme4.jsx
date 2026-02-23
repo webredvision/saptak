@@ -277,7 +277,7 @@ const AboutTheme4 = ({ teamData, aboutData, otherData, statsData, amcLogosData }
                   className="border border-[var(--rv-primary)]  bg-gradient-to-tl from-[var(--rv-bg-secondary)] via-[var(--rv-bg-secondary)] to-[var(--rv-bg-primary)] rounded-xl shadow-md p-5 md:p-8 flex flex-col gap-2 items-center text-center hover:shadow-lg transition-all duration-300"
                 >
                   <div className="w-20 h-20 bg-[var(--rv-bg-white)] p-3 rounded-full">
-                    <Image
+                    <Image unoptimized
                       src={item.img}
                       alt={item.heading}
                       width={80}

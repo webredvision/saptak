@@ -90,7 +90,7 @@ const GoalPlanningTheme4 = () => {
                     {item.title}
                   </h6>
                   <span className="w-12 h-12 rounded-full bg-[var(--rv-primary)]/10 flex items-center justify-center">
-                    <Image
+                    <Image unoptimized
                       src={item.icon}
                       alt={item.title}
                       width={32}

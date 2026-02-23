@@ -213,7 +213,7 @@ const NavbarTheme3 = ({ services, roboUser }) => {
                 className="fixed top-0 right-0 md:w-72 w-full h-screen bg-[var(--rv-bg-primary)] shadow-2xl z-50 text-[var(--rv-gray-light)] font-semibold flex flex-col"
               >
                 <div className="flex justify-between items-center p-5 border-b border-[var(--rv-white-light)]">
-                  <Image
+                  <Image unoptimized
                     src={logoSrc}
                     alt="Logo"
                     width={100}

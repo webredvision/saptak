@@ -83,7 +83,7 @@ const AppSectionTheme3 = ({ sitedata }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized
                       src="/images/gplay.png"
                       alt="Google Play"
                       width={160}
@@ -92,7 +92,7 @@ const AppSectionTheme3 = ({ sitedata }) => {
                     />
                   </Link>
                 ) : (
-                  <Image
+                  <Image unoptimized
                     src="/images/gplay.png"
                     alt="Google Play"
                     width={160}
@@ -106,7 +106,7 @@ const AppSectionTheme3 = ({ sitedata }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized
                       src="/images/appstore.png"
                       alt="App Store"
                       width={160}
@@ -115,7 +115,7 @@ const AppSectionTheme3 = ({ sitedata }) => {
                     />
                   </Link>
                 ) : (
-                  <Image
+                  <Image unoptimized
                     src="/images/appstore.png"
                     alt="App Store"
                     width={160}

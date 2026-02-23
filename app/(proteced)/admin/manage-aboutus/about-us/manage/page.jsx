@@ -54,7 +54,7 @@ const DataTableAboutUs = () => {
             header: "Image",
             cell: ({ row }) => {
                 const imageUrl = row.getValue("image")?.url || "/placeholder.jpg";
-                return <Image src={imageUrl} width={80} height={80} className="rounded-md object-cover" alt="About Image" />;
+                return <Image unoptimized src={imageUrl} width={80} height={80} className="rounded-md object-cover" alt="About Image" />;
             },
         },
         { accessorKey: "title", header: "Title", cell: ({ row }) => <div>{row.getValue("title")}</div> },

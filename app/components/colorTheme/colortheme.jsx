@@ -190,7 +190,7 @@ const Colortheme = () => {
                 onClick={() => fileInputRef.current?.click()}
               >
                 {logoPreview ? (
-                  <Image
+                  <Image unoptimized
                     src={logoPreview}
                     alt="Logo Preview"
                     fill

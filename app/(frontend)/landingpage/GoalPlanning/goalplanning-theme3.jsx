@@ -128,7 +128,7 @@ const GoalPlanningTheme3 = () => {
 
               {item.icon && (
                 <div className="w-12 h-12 mt-3">
-                  <Image
+                  <Image unoptimized
                     src={item.icon}
                     alt={item.title}
                     width={80}

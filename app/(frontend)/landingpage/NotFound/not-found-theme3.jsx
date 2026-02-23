@@ -14,7 +14,7 @@ const NotFoundTheme3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 items-center">
 
             <div className="relative w-full h-72 md:h-full bg-[var(--rv-bg-primary-light)] flex items-center justify-center">
-              <Image
+              <Image unoptimized
                 src="/images/page-not-found.png"
                 alt="404 Illustration"
                 width={450}

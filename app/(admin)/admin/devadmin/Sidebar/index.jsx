@@ -61,7 +61,7 @@ export const menuGroups = [
   },
 ];
 
-const Sidebar = ({}) => {
+const Sidebar = ({ }) => {
   const logoSrc = useLogoSrc();
   const [pageName, setPageName] = useState("dashboard");
   const { sidebarOpen, closeSidebar, isMobile } = useSidebar();
@@ -95,12 +95,12 @@ const Sidebar = ({}) => {
       >
         <div className="flex items-center justify-between p-4 border-b border-[var(--rv-gray)]">
           <Link href="/admin" className="h-20">
-           {logoSrc ? (
-              <Image
+            {logoSrc ? (
+              <Image unoptimized
                 src={logoSrc}
                 alt="logo"
                 width={120}
-                height={50} 
+                height={50}
                 priority
                 className="w-full h-full object-cover"
               />

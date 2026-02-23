@@ -18,7 +18,7 @@ const AppSectionTheme5 = ({ sitedata }) => {
       <section className="relative w-full p-4 md:p-0 overflow-hidden bg-[var(--rv-secondary)]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-5">
           <div className="relative">
-            <Image
+            <Image unoptimized
               src="/images/hand-mobile.png"
               alt="Mobile UI"
               width={500}
@@ -71,7 +71,7 @@ const AppSectionTheme5 = ({ sitedata }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized
                       src="/images/gplay.png"
                       alt="Google Play"
                       width={160}
@@ -80,7 +80,7 @@ const AppSectionTheme5 = ({ sitedata }) => {
                     />
                   </Link>
                 ) : (
-                  <Image
+                  <Image unoptimized
                     src="/images/gplay.png"
                     alt="Google Play"
                     width={160}
@@ -94,7 +94,7 @@ const AppSectionTheme5 = ({ sitedata }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized
                       src="/images/appstore.png"
                       alt="App Store"
                       width={160}
@@ -103,7 +103,7 @@ const AppSectionTheme5 = ({ sitedata }) => {
                     />
                   </Link>
                 ) : (
-                  <Image
+                  <Image unoptimized
                     src="/images/appstore.png"
                     alt="App Store"
                     width={160}

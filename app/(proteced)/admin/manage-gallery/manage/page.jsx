@@ -90,7 +90,7 @@ const ManageGallery = () => {
         const img = row.getValue("image");
         const src = img?.url || "/placeholder.png";
         return (
-          <Image
+          <Image unoptimized
             src={src}
             width={80}
             height={80}

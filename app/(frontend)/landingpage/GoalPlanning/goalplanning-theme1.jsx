@@ -106,7 +106,7 @@ const GoalPlanningTheme1 = () => {
                   <span className="absolute left-0 top-0 h-full w-1 bg-[var(--rv-primary)] transition-all duration-300" />
                   <div className="flex flex-col gap-4 relative z-10">
                     <div className="w-16 h-16 bg-[var(--rv-primary)] rounded-xl flex items-center justify-center">
-                      <Image
+                      <Image unoptimized
                         src={item.icon}
                         alt={item.title}
                         width={40}

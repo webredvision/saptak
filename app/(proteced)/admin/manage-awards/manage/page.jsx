@@ -127,7 +127,7 @@ const AwardsTable = () => {
       cell: ({ row }) => {
         const img = row.getValue("image");
         return img?.url ? (
-          <Image
+          <Image unoptimized
             src={img.url}
             width={80}
             height={80}

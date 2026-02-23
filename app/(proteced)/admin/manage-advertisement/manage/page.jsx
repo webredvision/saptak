@@ -103,7 +103,7 @@ const DataTableDemo = () => {
       cell: ({ row }) => (
         <div>
           {row.getValue("image")?.url ? (
-            <Image
+            <Image unoptimized
               src={row.getValue("image").url}
               width={100}
               height={100}

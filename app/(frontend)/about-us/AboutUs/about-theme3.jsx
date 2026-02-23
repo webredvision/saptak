@@ -181,7 +181,7 @@ const AboutTheme3 = ({
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
               <div className="flex gap-4 relative">
                 <div className="w-full rounded-xl bg-[var(--rv-bg-red)] h-[350px] overflow-hidden">
-                  <Image
+                  <Image unoptimized
                     src={aboutData[0]?.image.url}
                     width={500}
                     height={800}
@@ -190,7 +190,7 @@ const AboutTheme3 = ({
                   />
                 </div>
                 <div className="w-full hidden md:block rounded-xl bg-[var(--rv-bg-red)] h-[450px] overflow-hidden">
-                  <Image
+                  <Image unoptimized
                     src={aboutData[0]?.image.url}
                     width={500}
                     height={800}
@@ -287,7 +287,7 @@ const AboutTheme3 = ({
                 >
                   <div>
                     <div className="w-20 h-20 bg-[var(--rv-bg-primary)] p-3 rounded-full">
-                      <Image
+                      <Image unoptimized
                         src={item.img}
                         alt={item.heading}
                         width={400}

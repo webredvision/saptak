@@ -243,14 +243,14 @@ const AdminServices = () => {
                                         />
                                         {srv.image ? (
                                             srv.image instanceof File ? (
-                                                <Image
+                                                <Image unoptimized
                                                     src={URL.createObjectURL(srv.image)}
                                                     alt="Preview"
                                                     width={100}
                                                     height={100}
                                                 />
                                             ) : typeof srv.image === "string" ? (
-                                                <Image src={srv.image} alt="Preview" width={50} height={50} />
+                                                <Image unoptimized src={srv.image} alt="Preview" width={50} height={50} />
                                             ) : srv.image.url ? (
                                                 <img
                                                     src={
@@ -279,14 +279,14 @@ const AdminServices = () => {
                                         />
                                         {srv.icon ? (
                                             srv.icon instanceof File ? (
-                                                <Image
+                                                <Image unoptimized
                                                     src={URL.createObjectURL(srv.icon)}
                                                     alt="Preview"
                                                     width={100}
                                                     height={100}
                                                 />
                                             ) : typeof srv.icon === "string" ? (
-                                                <Image src={srv.icon} alt="Preview" width={50} height={50} />
+                                                <Image unoptimized src={srv.icon} alt="Preview" width={50} height={50} />
                                             ) : srv.icon.url ? (
                                                 <img
                                                     src={
@@ -353,14 +353,14 @@ const AdminServices = () => {
                                         />
                                         {feat.icon ? (
                                             feat.icon instanceof File ? (
-                                                <Image
+                                                <Image unoptimized
                                                     src={URL.createObjectURL(feat.icon)}
                                                     alt="Preview"
                                                     width={100}
                                                     height={100}
                                                 />
                                             ) : typeof feat.icon === "string" ? (
-                                                <Image src={feat.icon} alt="Preview" width={50} height={50} />
+                                                <Image unoptimized src={feat.icon} alt="Preview" width={50} height={50} />
                                             ) : feat.icon.url ? (
                                                 <img
                                                     src={
@@ -460,14 +460,14 @@ const AdminServices = () => {
                                         />
                                         {ben.icon ? (
                                             ben.icon instanceof File ? (
-                                                <Image
+                                                <Image unoptimized
                                                     src={URL.createObjectURL(ben.icon)}
                                                     alt="Preview"
                                                     width={100}
                                                     height={100}
                                                 />
                                             ) : typeof ben.icon === "string" ? (
-                                                <Image src={ben.icon} alt="Preview" width={50} height={50} />
+                                                <Image unoptimized src={ben.icon} alt="Preview" width={50} height={50} />
                                             ) : ben.icon.url ? (
                                                 <img
                                                     src={

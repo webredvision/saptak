@@ -166,7 +166,7 @@ const PopupsTable = () => {
       cell: ({ row }) => {
         const image = row.getValue("image");
         return image?.url ? (
-          <Image
+          <Image unoptimized
             src={image.url}
             width={120}
             height={80}

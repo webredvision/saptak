@@ -125,7 +125,7 @@ const AmcsLogo = () => {
                             />
                           </svg>
                         ) : (
-                          <Image
+                          <Image unoptimized
                             src={"/images/icon/eyehide.svg"}
                             width={20}
                             height={20}
@@ -172,7 +172,7 @@ const AmcsLogo = () => {
                         type="submit"
                         onClick={() => handleEditModelOpen(item._id)}
                       >
-                        <Image
+                        <Image unoptimized
                           src={"/images/icon/pen.svg"}
                           width={20}
                           height={20}
@@ -183,7 +183,7 @@ const AmcsLogo = () => {
                     </div>
                     <div className="my-4">
                       {item.logo && typeof item?.logo !== "string" ? (
-                        <Image
+                        <Image unoptimized
                           // Generate a temporary URL for File
                           src={URL.createObjectURL(item.logo)}
                           width={150}
@@ -191,7 +191,8 @@ const AmcsLogo = () => {
                           alt="Uploaded Logo"
                         />
                       ) : (
-                        <Image
+                        <Image unoptimized
+                        
                           // Use string or fallback placeholder
                           src={item.logo || "/placeholder-image.jpg"}
                           width={150}

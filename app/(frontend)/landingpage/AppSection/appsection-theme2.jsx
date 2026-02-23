@@ -16,7 +16,7 @@ const AppSectionTheme2 = ({ sitedata }) => {
         <div className="max-w-7xl mx-auto main-section grid grid-cols-1 lg:grid-cols-3 items-center gap-5 lg:gap-12">
           <div className="relative flex justify-center items-center">
             <div className="relative rounded-xl">
-              <Image
+              <Image unoptimized
                 src="/images/phone.png"
                 alt="Mobile UI"
                 width={300}
@@ -54,7 +54,7 @@ const AppSectionTheme2 = ({ sitedata }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized
                       src="/images/gplay.png"
                       alt="Google Play"
                       width={160}
@@ -63,7 +63,7 @@ const AppSectionTheme2 = ({ sitedata }) => {
                     />
                   </Link>
                 ) : (
-                  <Image
+                  <Image unoptimized
                     src="/images/gplay.png"
                     alt="Google Play"
                     width={160}
@@ -77,7 +77,7 @@ const AppSectionTheme2 = ({ sitedata }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized
                       src="/images/appstore.png"
                       alt="App Store"
                       width={160}
@@ -86,7 +86,7 @@ const AppSectionTheme2 = ({ sitedata }) => {
                     />
                   </Link>
                 ) : (
-                  <Image
+                  <Image unoptimized
                     src="/images/appstore.png"
                     alt="App Store"
                     width={160}

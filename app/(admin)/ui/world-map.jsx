@@ -46,7 +46,7 @@ export default function WorldMap({
         width: "100%", // Ensure the container takes up full width
       }}>
 
-      {/* <Image
+      {/* <Image unoptimized
         // ref={imageRef} // Attach the ref to the image
         src={`/india.png`}
         className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none object-cover"

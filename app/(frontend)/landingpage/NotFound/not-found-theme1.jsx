@@ -18,7 +18,7 @@ const NotFoundTheme1 = () => {
             transition={{ duration: 0.7 }}
             className="lg:flex justify-center hidden"
           >
-            <Image
+            <Image unoptimized
               src="/images/page-not-found.png"
               alt="404 Not Found"
               width={520}

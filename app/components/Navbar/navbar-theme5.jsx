@@ -100,7 +100,7 @@ const NavbarTheme5 = ({ services, roboUser }) => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/">
           {logoSrc ? (
-            <Image src={logoSrc} alt="logo" width={120} height={50} priority />
+            <Image unoptimized src={logoSrc} alt="logo" width={120} height={50} priority />
           ) : (
             <h1 className="text-[var(--rv-primary)]  font-bold">Logo</h1>
           )}
@@ -225,7 +225,7 @@ const NavbarTheme5 = ({ services, roboUser }) => {
               className="fixed right-0 top-0 h-screen w-72 bg-[var(--rv-bg-white)] z-50 p-5"
             >
               <div className="flex justify-between mb-4">
-                <Image src={logoSrc} alt="logo" width={90} height={40} />
+                <Image unoptimized src={logoSrc} alt="logo" width={90} height={40} />
                 <FiX size={24} onClick={() => setIsMobileMenuOpen(false)} />
               </div>
 

@@ -34,7 +34,7 @@ const AppSectionTheme4 = ({ sitedata }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized
                       src="/images/gplay.png"
                       alt="Google Play"
                       width={160}
@@ -43,7 +43,7 @@ const AppSectionTheme4 = ({ sitedata }) => {
                     />
                   </Link>
                 ) : (
-                  <Image
+                  <Image unoptimized
                     src="/images/gplay.png"
                     alt="Google Play"
                     width={160}
@@ -57,7 +57,7 @@ const AppSectionTheme4 = ({ sitedata }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Image
+                    <Image unoptimized
                       src="/images/appstore.png"
                       alt="App Store"
                       width={160}
@@ -66,7 +66,7 @@ const AppSectionTheme4 = ({ sitedata }) => {
                     />
                   </Link>
                 ) : (
-                  <Image
+                  <Image unoptimized
                     src="/images/appstore.png"
                     alt="App Store"
                     width={160}
@@ -78,7 +78,7 @@ const AppSectionTheme4 = ({ sitedata }) => {
             </div>
             <div className="relative border border-[var(--rv-primary)] z-10 bg-gradient-to-tl from-[var(--rv-bg-secondary)] via-[var(--rv-bg-secondary)] to-[var(--rv-bg-primary)] text-[var(--rv-white)] rounded-xl overflow-hidden">
               <div className="relative">
-                <Image
+                <Image unoptimized
                   src="/images/hand-mobile.png"
                   alt="Mobile UI"
                   width={500}

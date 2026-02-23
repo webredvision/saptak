@@ -88,7 +88,7 @@ const DataTableDemo = () => {
         {
             accessorKey: "image",
             header: "Image",
-            cell: ({ row }) => <div><Image src={row.getValue("image")?.url} width={100} height={100} className="rounded-full" priority={false} alt="image" /></div>,
+            cell: ({ row }) => <div><Image unoptimized src={row.getValue("image")?.url} width={100} height={100} className="rounded-full" priority={false} alt="image" /></div>,
         },
         {
             accessorKey: "title",

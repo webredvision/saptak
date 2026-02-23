@@ -60,7 +60,7 @@ const NavbarTheme1 = ({ services = [], roboUser }) => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/">
             {logoSrc ? (
-              <Image
+              <Image unoptimized
                 src={logoSrc}
                 alt="logo"
                 width={120}

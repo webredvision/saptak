@@ -119,7 +119,7 @@ const DataTableDemo = () => {
       accessorKey: "image",
       header: "Image",
       cell: ({ row }) => (
-        <Image
+        <Image unoptimized
           src={row.getValue("image")?.url}
           width={80}
           height={80}

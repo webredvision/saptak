@@ -196,7 +196,7 @@ const AmcsLogo = () => {
 
                         <div className="my-4">
                           {item.logo && typeof item.logo !== "string" ? (
-                            <Image
+                            <Image unoptimized
                               src={URL.createObjectURL(item.logo)}
                               width={150}
                               height={100}

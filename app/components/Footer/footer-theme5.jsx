@@ -53,7 +53,7 @@ const FooterTheme5 = ({ services, sitedata, socialMedia, arnData }) => {
         <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4 ">
           <div>
             {logoSrc ? (
-              <Image src={logoSrc} alt="logo" width={120} height={50} priority />
+              <Image unoptimized src={logoSrc} alt="logo" width={120} height={50} priority />
             ) : (
               <h1 className="text-[var(--rv-primary)]  font-bold">Logo</h1>
             )}
@@ -201,7 +201,7 @@ const FooterTheme5 = ({ services, sitedata, socialMedia, arnData }) => {
         <div className="py-4 flex justify-center border-t border-b border-[var(--rv-gray-light)]">
           <div className="flex flex-col md:flex-row  gap-5 items-center justify-center w-full">
             <div className="h-16 w-auto rounded-md overflow-hidden">
-              <Image
+              <Image unoptimized
                 src="/images/amfi-logo.jpg"
                 width={80}
                 height={80}
@@ -220,7 +220,7 @@ const FooterTheme5 = ({ services, sitedata, socialMedia, arnData }) => {
               </div>
             </div>
             <div className="h-16 w-auto rounded-md overflow-hidden">
-              <Image
+              <Image unoptimized
                 src="/images/mutualfund.png"
                 width={200}
                 height={80}

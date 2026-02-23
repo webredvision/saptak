@@ -266,7 +266,7 @@ const EditStats = () => {
 
               {previewImage && (
                 <div className="">
-                  <Image
+                  <Image unoptimized
                     src={previewImage}
                     alt="Preview"
                     width={100}

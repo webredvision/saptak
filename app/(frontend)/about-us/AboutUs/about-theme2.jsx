@@ -325,7 +325,7 @@ const AboutTheme2 = ({
                   className="border border-[var(--rv-white-light)] rounded-xl shadow-md p-5 md:p-8 flex flex-col gap-2 items-center text-center hover:shadow-lg transition-all duration-300"
                 >
                   <div className="w-20 h-20 bg-[var(--rv-bg-white)] p-3 rounded-full">
-                    <Image
+                    <Image unoptimized
                       src={item.img}
                       alt={item.heading}
                       width={80}

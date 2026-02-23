@@ -72,7 +72,7 @@ const Sidebar = ({ }) => {
         <div className="flex items-center justify-between p-4 border-b border-[var(--rv-gray)]">
           <Link href="/admin" className="h-20">
             {logoSrc ? (
-              <Image
+              <Image unoptimized
                 src={logoSrc}
                 alt="logo"
                 width={120}

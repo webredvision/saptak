@@ -276,7 +276,7 @@ const AboutTheme5 = ({ teamData, aboutData, otherData, statsData, amcLogosData }
                 >
                   <div>
                     <div className="w-20 h-20 bg-[var(--rv-bg-secondary)] p-3 rounded-xl">
-                      <Image
+                      <Image unoptimized
                         src={item.img}
                         alt={item.heading}
                         width={400}

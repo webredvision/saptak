@@ -114,7 +114,7 @@ const GoalPlanningTheme2 = () => {
               <div className='flex items-end justify-end'>
                 {item.icon && (
                   <div className="w-12 h-12">
-                    <Image
+                    <Image unoptimized
                       src={item.icon}
                       alt={item.title}
                       width={80}

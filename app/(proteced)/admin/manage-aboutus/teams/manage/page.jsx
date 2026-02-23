@@ -83,7 +83,7 @@ const TeamTable = () => {
       accessorKey: "image",
       header: "Image",
       cell: ({ row }) => (
-        <Image
+        <Image unoptimized
           src={row.original.image?.url || ""}
           alt="member"
           width={60}

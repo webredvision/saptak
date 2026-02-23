@@ -22,7 +22,7 @@ const AppSectionTheme1 = ({ sitedata }) => {
           <div className="flex gap-4 flex-wrap">
             {playStoreUrl ? (
               <Link href={playStoreUrl} target="_blank" rel="noopener noreferrer">
-                <Image
+                <Image unoptimized
                   src="/images/gplay.png"
                   alt="Google Play"
                   width={160}
@@ -30,7 +30,7 @@ const AppSectionTheme1 = ({ sitedata }) => {
                 />
               </Link>
             ) : (
-              <Image
+              <Image unoptimized
                 src="/images/gplay.png"
                 alt="Google Play"
                 width={160}
@@ -39,7 +39,7 @@ const AppSectionTheme1 = ({ sitedata }) => {
             )}
             {appStoreUrl ? (
               <Link href={appStoreUrl} target="_blank" rel="noopener noreferrer">
-                <Image
+                <Image unoptimized
                   src="/images/appstore.png"
                   alt="App Store"
                   width={160}
@@ -47,7 +47,7 @@ const AppSectionTheme1 = ({ sitedata }) => {
                 />
               </Link>
             ) : (
-              <Image
+              <Image unoptimized
                 src="/images/appstore.png"
                 alt="App Store"
                 width={160}
@@ -58,7 +58,7 @@ const AppSectionTheme1 = ({ sitedata }) => {
         </div>
 
         <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
-          <Image
+          <Image unoptimized
             src="/images/hand-mobile.png"
             alt="hand-mobile"
             width={500}

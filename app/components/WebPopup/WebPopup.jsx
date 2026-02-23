@@ -46,7 +46,7 @@ const WebPopup = ({ popups }) => {
                 {/* Popup Image */}
                 {currentPopup.image?.url && (
                     <div className="relative w-full aspect-[4/3] md:aspect-video bg-gray-100">
-                        <Image
+                        <Image unoptimized
                             src={currentPopup.image.url}
                             alt={currentPopup.title || "Special Offer"}
                             fill

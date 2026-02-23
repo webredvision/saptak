@@ -64,7 +64,7 @@ export default function CalculatorTabs() {
                     <Link href={item?.route || item?.link || "#"} key={index}>
                         <div className="bg-[#0a0a0a] border border-[var(--rv-white-light)] hover:border-[var(--rv-secondary)] transition-all duration-300 rounded-2xl p-6 shadow-md group flex flex-col items-center justify-center text-center h-52">
                             <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[var(--rv-secondary)] group-hover:bg-[var(--rv-bg-white)] transition-all duration-300">
-                                <Image
+                                <Image unoptimized
                                     src={item?.image}
                                     alt={item?.title || ""}
                                     width={32}

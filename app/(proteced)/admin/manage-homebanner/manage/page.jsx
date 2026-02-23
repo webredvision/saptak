@@ -104,7 +104,7 @@ const DataTableDemo = () => {
                 return (
                     <div className="flex justify-center">
                         {image?.url ? (
-                            <Image
+                            <Image unoptimized
                                 src={image.url}
                                 width={80}
                                 height={80}

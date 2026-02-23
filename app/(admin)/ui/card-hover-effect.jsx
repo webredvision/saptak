@@ -89,6 +89,6 @@ export const CardIcon = ({
   children
 }) => {
   return (
-    <Image src={children} width={50} height={50} alt="image" />
+    <Image unoptimized src={children} width={50} height={50} alt="image" />
   );
 };
