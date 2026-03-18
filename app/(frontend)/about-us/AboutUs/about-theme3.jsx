@@ -251,7 +251,7 @@ const AboutTheme3 = ({
                 <Button link={'/login'} text="Start Investment" />
               </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full border-t py-4 ">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-4 w-full border-t py-4 ">
               {statsData.map((stat, index) => (
                 <motion.div
                   key={index}

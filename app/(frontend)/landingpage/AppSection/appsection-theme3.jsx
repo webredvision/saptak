@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { FaStar } from "react-icons/fa";
+import { FaChartArea, FaGlobe, FaStar } from "react-icons/fa";
 import { FaShield } from "react-icons/fa6";
 import { FiSmartphone, FiZap } from "react-icons/fi";
 import { motion } from "framer-motion";
@@ -37,9 +37,9 @@ const AppSectionTheme3 = ({ sitedata }) => {
 
             <div className="space-y-4">
               {[
-                { icon: FiZap, text: "Lightning-fast transactions" },
-                { icon: FaShield, text: "Bank-level security" },
-                { icon: FaStar, text: "Exclusive app-only rewards" },
+                { icon: FiZap, text: "Peer-To-Peer Lending" },
+                { icon: FaGlobe, text: "Global Investing" },
+                { icon: FaChartArea, text: "Portfolio Rebalancing" },
               ].map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-3">
                   <div className="bg-[var(--rv-bg-primary)] text-[var(--rv-white)] p-2 rounded-lg">

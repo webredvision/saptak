@@ -32,7 +32,7 @@ const tabOptions = [
     key: "sol",
     label: "Sol Oriented",
     description: "Save taxes, grow money",
-    defaultSub: "ELSS",
+    defaultSub: "Childrens Fund",
     icon: "/images/fundperformer/sol-oriented.svg",
   },
   {
@@ -170,35 +170,36 @@ export default function FundPerformanceTheme3() {
     }
   }, [activeTab]);
 
-    const handleSelectFunds = (fund, subcategory) => {
-      if (!SECRET_KEY) {
-        console.error("Missing SECRET_KEY! Please define NEXT_PUBLIC_SECRET_KEY in .env file.");
-        return;
-      }
-       console.log(fund)
-       const dataToStore = {
-        pcode:fund?.pcode,
-        ftype: subcategory,
-        timestamp: Date.now(),
-      };
-     
-      console.log(dataToStore)
-      try {
-        const encrypted = CryptoJS.AES.encrypt(
-          JSON.stringify(dataToStore),
-          SECRET_KEY
-        ).toString();
-  
-        localStorage.setItem("encryptedFundPerormanceData", encrypted);
-  
-        window.location.href = "/performance/fund-performance/fund-details";
-      } catch (error) {
-        console.error("Encryption or navigation failed:", error);
-      }
-     
+  const handleSelectFunds = (fund, subcategory) => {
+    if (!SECRET_KEY) {
+      console.error("Missing SECRET_KEY! Please define NEXT_PUBLIC_SECRET_KEY in .env file.");
+      return;
+    }
+    console.log(fund)
+    const dataToStore = {
+      pcode: fund?.pcode,
+      ftype: subcategory,
+      timestamp: Date.now(),
     };
 
-  const renderNav = (f) => pick(f, ["si", "nav", "navValue", "nav"], "—");
+    console.log(dataToStore)
+    try {
+      const encrypted = CryptoJS.AES.encrypt(
+        JSON.stringify(dataToStore),
+        SECRET_KEY
+      ).toString();
+
+      localStorage.setItem("encryptedFundPerormanceData", encrypted);
+
+      window.location.href = "/performance/fund-performance/fund-details";
+    } catch (error) {
+      console.error("Encryption or navigation failed:", error);
+    }
+
+  };
+
+  const renderNav = (f) => pick(f, ["NAVAmount"], "—");
+  const render1y = (f) => pick(f, ["one_year"], "—");
   const render3y = (f) => pick(f, ["three_year", "3y", "threeYear"], "—");
   const render5y = (f) => pick(f, ["five_year", "5y", "fiveYear"], "—");
 
@@ -231,8 +232,10 @@ export default function FundPerformanceTheme3() {
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
           >
+            {console.log(tabOptions)}
             {tabOptions.map((tab) => {
               const isActive = activeTab === tab.key;
+              console.log(activeTab)
               return (
                 <motion.button
                   key={tab.key}
@@ -240,27 +243,24 @@ export default function FundPerformanceTheme3() {
                   onClick={() => setActiveTab(tab.key)}
                   whileHover={{ y: -3, scale: 1.01 }}
                   whileTap={{ scale: 0.97 }}
-                  className={`border border-[var(--rv-primary)] p-2 rounded-md transition-all duration-200 ${
-                    isActive
-                      ? "bg-[var(--rv-primary)] text-[var(--rv-white)] shadow-md"
-                      : ""
-                  }`}
+                  className={`border border-[var(--rv-primary)] p-2 rounded-md transition-all duration-200 ${isActive
+                    ? "bg-[var(--rv-primary)] text-[var(--rv-white)] shadow-md"
+                    : ""
+                    }`}
                 >
                   <div className="flex items-center gap-2">
                     <div>
                       <div
-                        className={`w-10 h-10 rounded-full p-2 flex items-center justify-center ${
-                          isActive
-                            ? "bg-[var(--rv-white)]"
-                            : "bg-[var(--rv-primary)]"
-                        }`}
+                        className={`w-10 h-10 rounded-full p-2 flex items-center justify-center ${isActive
+                          ? "bg-[var(--rv-white)]"
+                          : "bg-[var(--rv-primary)]"
+                          }`}
                       >
                         <img
                           src={tab.icon}
                           alt={tab.label}
-                          className={`w-full h-full object-cover ${
-                            isActive ? "" : "filter brightness-0 invert"
-                          }`}
+                          className={`w-full h-full object-cover ${isActive ? "" : "filter brightness-0 invert"
+                            }`}
                         />
                       </div>
                     </div>
@@ -291,6 +291,7 @@ export default function FundPerformanceTheme3() {
                   <tr>
                     <th className="p-4 text-center">Fund Name</th>
                     <th className="p-4 text-center">Nav</th>
+                    <th className="p-4 text-center">1Y Return</th>
                     <th className="p-4 text-center">3Y Return</th>
                     <th className="p-4 text-center">5Y Return</th>
                   </tr>
@@ -322,7 +323,11 @@ export default function FundPerformanceTheme3() {
                         </p>
                       </td>
                       <td className="px-4 py-4 text-center">
-                        {renderNav(fund) || "0.00"}
+                        ₹{renderNav(fund) || "0.00"}
+                        {console.log(fund)}
+                      </td>
+                      <td className="px-4 py-4 text-center text-[var(--rv-secondary)] font-semibold">
+                        {render1y(fund) || "0.00"}%
                       </td>
                       <td className="px-4 py-4 text-center text-[var(--rv-secondary)] font-semibold">
                         {render3y(fund) || "0.00"}%

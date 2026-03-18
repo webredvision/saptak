@@ -14,7 +14,8 @@ const ServicecardTheme3 = ({ services }) => (
                 </div>
                 <Button text="All Services" link="/services" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div className={`grid ${services?.length === 1 ? 'grid-cols-1':
+                services?.length === 2 ? 'md:grid-cols-2 grid-cols-1': services?.length === 3 ? 'lg:grid-cols-3 md:grid-cols-2 grid-cols-1': 'xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'} gap-5`}>
                 {services?.slice(0, 4)?.map((service, i) => (
                     <div key={i} className="group relative h-full bg-[var(--rv-bg-white)] text-[var(--rv-black)] hover:text-[var(--rv-white)] after:w-full after:h-0 z-10 after:absolute after:hover:h-full after:transition-all after:duration-500 after:z-0 after:bg-gradient-to-r after:from-[var(--rv-bg-primary)] after:to-[var(--rv-bg-secondary)] after:bottom-0 after:left-0 after:translate-y-0 rounded-xl p-6 overflow-hidden transition-all duration-300">
                         <div className="relative z-10">

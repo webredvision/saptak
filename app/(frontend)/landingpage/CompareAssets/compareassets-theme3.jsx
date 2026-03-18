@@ -140,7 +140,7 @@ const CompareAssetsTheme3 = () => {
             <Heading
               align="start"
               title={'Smart Investments'}
-              heading="Where Should You Invest?"
+              heading="Where Should You Invest ?"
               description="Compare risk, returns, liquidity, and benefits across popular investment options."
             />
           </motion.div>
@@ -149,7 +149,7 @@ const CompareAssetsTheme3 = () => {
             <label className="font-medium text-[var(--rv-primary-dark)]">
               Monthly Investment:{" "}
               <span className="text-[var(--rv-primary)] font-bold">
-                ?{monthly}
+                ₹{monthly}
               </span>
             </label>
             <input
@@ -186,7 +186,6 @@ const CompareAssetsTheme3 = () => {
               link={'/contact-us'}
               className={'w-fit'}
               text="Start With Smart Investments"
-              link="/login"
             />
           </div>
         </div>
@@ -219,7 +218,7 @@ const CompareAssetsTheme3 = () => {
                   {asset.name}
                 </h6>
                 <h6 className="text-[var(--rv-secondary)] font-bold">
-                  ?{formatINR(calculateFundReturn(monthly, years, asset.rate, asset.type))}
+                  ₹{formatINR(calculateFundReturn(monthly, years, asset.rate, asset.type))}
                 </h6>
                 <p className="">at {asset.rate}% annual return</p>
               </div>

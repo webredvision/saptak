@@ -29,14 +29,13 @@ const HeroTheme3 = () => {
             </div>
           </div>
 
-          <div className="relative z-10 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 items-end justify-end">
+          <div className="relative z-10 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 items-end justify-end">
             <div className="bg-[var(--rv-bg-primary)] text-[var(--rv-white)] rounded-xl flex flex-col gap-3 p-5">
               <p>
-                Focused on trust, transparency, and disciplined long-term
-                investing.
+                Focused on Trust, Transparency & Long-Term Discipline
               </p>
               <p>
-                <b>SEBI-Compliant</b> Mutual Fund Support
+                <b>AMFI-Registered</b> Mutual Fund Distributor
               </p>
               <div className="w-full h-72 rounded-xl overflow-hidden">
                 <img
@@ -47,7 +46,7 @@ const HeroTheme3 = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-[var(--rv-bg-secondary)] to-[var(--rv-bg-secondary)] relative z-10 p-5 text-[var(--rv-white)] rounded-xl flex flex-col gap-3">
+            {/* <div className="bg-gradient-to-r from-[var(--rv-bg-secondary)] to-[var(--rv-bg-secondary)] relative z-10 p-5 text-[var(--rv-white)] rounded-xl flex flex-col gap-3">
               <div className="flex flex-col gap-5">
                 <h1>10,000+</h1>
                 <div className="flex flex-col gap-2">
@@ -61,11 +60,11 @@ const HeroTheme3 = () => {
               <div className="absolute top-0 right-0 -z-10">
                 <img src="/images/hero-info-item-bg.png" alt="Mutual Fund Consultation Madurai" />
               </div>
-            </div>
+            </div> */}
 
             <div className="bg-gradient-to-b from-transparent via-transparent to-[var(--rv-bg-white)] rounded-xl flex flex-col gap-8 p-5">
               <div className="flex flex-col gap-2">
-                <h6>Years of Distribution Experience</h6>
+                <h6>10 Years of Distribution Experience</h6>
                 <p>
                   Facilitating SEBI-registered mutual fund investments with
                   disciplined guidance.
@@ -73,19 +72,19 @@ const HeroTheme3 = () => {
               </div>
               <div className="w-full h-[1px] bg-gradient-to-r from-[var(--rv-bg-secondary-dark)] to-[var(--rv-bg-secondary)]"></div>
               <div className="flex flex-col gap-2">
-                <h1>1,000s</h1>
+                <h6>1,000s of Transactions Processed</h6>
                 <p>
-                  Reliable support across SIPs, purchases, redemptions, and
-                  service requests.
+                  Reliable support across SIPs, purchases, redemptions, and service requests.
                 </p>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-[var(--rv-bg-primary)] to-[var(--rv-bg-secondary)] text-[var(--rv-white)] rounded-xl flex flex-col gap-3 p-7">
-              <b>
-                Helping investors make informed decisions through compliant and
-                transparent mutual fund access.
-              </b>
+              <h6>
+                <b>
+                  Compliance-Driven & Investor-Focused
+                </b>
+              </h6>
               <div className="w-full h-72 rounded-xl overflow-hidden">
                 <img
                   src="/images/hero-item-image.png"

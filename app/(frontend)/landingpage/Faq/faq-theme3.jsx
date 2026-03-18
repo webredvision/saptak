@@ -15,7 +15,7 @@ const FaqTheme3 = ({ faqs = [] }) => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
         <div className="flex flex-col gap-6 max-w-xl">
-          <Heading align="start" title={'Frequently Asked Questions'} heading={'Everything you want to know cybersecurity'} description={'From service details to protection strategies, we provide clear explanations to help you make informed decisions.'} />
+          <Heading align="start" title={'Frequently Asked Questions'} heading={'Answers to Your Most Common Questions'} description={'From service details to protection strategies, we provide clear explanations to help you make informed decisions.'} />
         </div>
 
         <div className="flex flex-col ">
